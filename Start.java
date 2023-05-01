@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -5,7 +6,7 @@ import java.util.Scanner;
 
 
 public class Start {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<Toy> toys = new ArrayList<>(); //Лист всех игрушек
         toys.add(new Toy("Робот", 10, 5));
         toys.add(new Toy("Кукла", 20, 6));
@@ -29,7 +30,7 @@ public class Start {
                     view.printprize(rafl.getPrizeList().toString());
                 }
                 case "rafl" -> {
-
+                    rafl.writeToFile();
                 }
                 case "exit" -> {
                     f = false;

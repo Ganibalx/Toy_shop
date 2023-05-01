@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -44,5 +46,11 @@ public class Rafl {
         return prizeList;
     }
 
-    public
+    public void writeToFile() throws IOException {
+        if (this.prizeList.size() > 0) {
+            FileWriter fw = new FileWriter("Priz.txt", true);
+            fw.append(this.prizeList.remove(0)+ "; ");
+            fw.flush();
+        }
+    }
 }
