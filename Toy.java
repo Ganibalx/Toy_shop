@@ -32,4 +32,8 @@ public class Toy {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
 }

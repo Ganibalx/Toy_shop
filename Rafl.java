@@ -51,6 +51,7 @@ public class Rafl {
             FileWriter fw = new FileWriter("Priz.txt", true);
             fw.append(this.prizeList.remove(0)+ "; ");
             fw.flush();
+            fw.close();
         }
     }
 }

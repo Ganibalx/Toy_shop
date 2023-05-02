@@ -1,8 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
 
 
 public class Start {
@@ -31,6 +29,9 @@ public class Start {
                 }
                 case "rafl" -> {
                     rafl.writeToFile();
+                }
+                case "edit" -> {
+                    view.printToy(toys);
                 }
                 case "exit" -> {
                     f = false;
